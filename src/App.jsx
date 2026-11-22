@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { ShieldCheck, Wallet, Smartphone, GraduationCap, BookOpen, Languages, Menu, X, ArrowRight, PlayCircle, Volume2, Search, Bell, AlertTriangle, Landmark, Calculator, BarChart3, Headphones, ChevronRight, ExternalLink, CheckCircle2, LockKeyhole, IndianRupee, BadgeCheck, Globe2, HeartHandshake, Lightbulb, FileText } from 'lucide-react';
+import { ShieldCheck, Wallet, Smartphone, GraduationCap, BookOpen, Languages, Menu, X, ArrowRight, PlayCircle, Volume2, Search, Bell, AlertTriangle, Landmark, Calculator, BarChart3, Headphones, ChevronRight, ExternalLink, CheckCircle2, LockKeyhole, IndianRupee, BadgeCheck, Globe2, HeartHandshake, Lightbulb, FileText, HandCoins, Sprout } from 'lucide-react';
 
 const languages = [
   ['en','English'],['as','Assamese'],['bn','Bengali'],['brx','Bodo'],['doi','Dogri'],['gu','Gujarati'],['hi','Hindi'],['kn','Kannada'],['ks','Kashmiri'],['kok','Konkani'],['mai','Maithili'],['ml','Malayalam'],['mni','Manipuri (Meitei)'],['mr','Marathi'],['ne','Nepali'],['or','Odia'],['pa','Punjabi'],['sa','Sanskrit'],['sat','Santali'],['sd','Sindhi'],['ta','Tamil'],['te','Telugu'],['ur','Urdu']
@@ -28,7 +28,7 @@ const scamCases = [
   {title:'Fraudulent loan app',type:'Loan / data misuse',risk:'High',body:'An untrusted app advertises instant loans, then may demand excessive permissions, upfront fees or threaten borrowers.',signs:['App not linked from a regulated lender’s official website','Unclear interest, fees or lender identity','Requests for contacts, photos or advance payment'],action:'Verify the lender and app before applying. Read the loan agreement and avoid sharing unnecessary device permissions.'}
 ];
 
-function Logo(){return <a className="brand" href="#home" aria-label="FinSuraksha home"><span className="brand-mark"><BookOpen size={24}/><span className="brand-leaf">✦</span></span><span><b>FinSuraksha</b><small>LEARN MONEY. STAY SAFE.</small></span></a>}
+function Logo(){return <a className="brand" href="#home" aria-label="FinSuraksha home"><span className="brand-mark"><BookOpen size={23}/><span className="brand-hands"><HandCoins size={17}/></span><span className="brand-leaf"><Sprout size={15}/></span></span><span><b>FinSuraksha</b><small>LEARN MONEY. STAY SAFE.</small></span></a>}
 function SectionTitle({eyebrow,title,desc}){return <div className="section-title"><span className="eyebrow">{eyebrow}</span><h2>{title}</h2>{desc&&<p>{desc}</p>}</div>}
 function App(){
  const [lang,setLang]=useState('en'),[font,setFont]=useState(0),[menu,setMenu]=useState(false),[active,setActive]=useState('home'),[search,setSearch]=useState(''),[selectedLesson,setSelectedLesson]=useState(null),[selectedCase,setSelectedCase]=useState(null),[principal,setPrincipal]=useState('50000'),[rate,setRate]=useState('12'),[months,setMonths]=useState('12'),[quiz,setQuiz]=useState(''),[quizDone,setQuizDone]=useState(false),[alertOpen,setAlertOpen]=useState(false);
